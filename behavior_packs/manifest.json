@@ -1,0 +1,25 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "非常牛逼的一个行为包",
+    "name": "Pro",
+    "uuid":"0d35884e-3c26-4635-9ed2-255576d63e9a",
+    "version": [1, 0, 5],
+    "min_engine_version": [1, 16, 0]
+  },
+  "modules":
+    [
+      {
+        "description": "My First Add-On!",
+          "type": "data",
+          "uuid": "2e50102a-c9b8-4ea8-8233-a10574c772f7",
+          "version": [1, 0, 0]
+      }
+    ],
+  "dependencies": [
+    {
+     "uuid":"790c5bb2-eb58-46b3-b137-561db809eaa9",
+      "version":[1,0,0]
+    }
+ ]
+}
