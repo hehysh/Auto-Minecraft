@@ -1,0 +1,40 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:pro": {
+      "description": {
+        "identifier": "minecraft:pro",
+        "is_spawnable": true,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+      "component_groups": {},
+      "components": {
+        "minecraft:type_family": {
+          "family": "minecraft:player"
+        },
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        },
+        "minecraft:attack": {
+          "priority": 1,
+          "target_filters": {
+            "minecraft:entity_type_filter": {
+              "all_of": [
+                {
+                  "minecraft:is_spawnable_mob": {
+                    "value": true
+                  }
+                },
+                {
+                  "minecraft:type_family": {
+                    "family": "zombie"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,42 @@
+{
+  "minecraft:biome": {
+    "description": {
+      "identifier": "prohome",
+      "is_creative": false,
+      "is_survival": true,
+      "name": "Pro Home"
+    },
+    "generation": {
+      "features": {
+        "minecraft:decorated": {
+          "type": "minecraft:single_block",
+          "block": "minecraft:grass_path",
+          "config": {
+            "feature": "minecraft:grass",
+            "decorator": {
+              "type": "minecraft:count",
+              "count": 100
+            }
+          },
+          "placements": [
+            {
+              "type": "minecraft:random_placement",
+              "config": {
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mobs": {
+      "minecraft:entity_type": {
+        "pro": {
+          "weight": 10,
+          "min_count": 1,
+          "max_count": 3
+        }
+      }
+    }
+  }
+}
