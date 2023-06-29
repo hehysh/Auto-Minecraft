@@ -2,8 +2,8 @@
     "format_version": "1.16.0",
     "minecraft:pro": {
       "description": {
-        "identifier": "test:pro",
-        "runtime_identifier": "test:pro",
+        "identifier": "minecraft:pro",
+        "runtime_identifier": "minecraft:pig",
         "is_spawnable": true,
         "is_summonable": true,
         "is_experimental": false
@@ -11,7 +11,7 @@
       "component_groups": {},
       "components": {
         "minecraft:type_family": {
-          "family": [ "test", "npc"]
+          "family": [ "minecraft", "pro"]
         },
         "minecraft:health": {
           "value": 20,

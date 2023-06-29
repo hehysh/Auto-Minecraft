@@ -1,10 +1,10 @@
 {
     "format_version": 2,
     "header": {
-    "description": "🐮🍺",
-    "name": "AutoCraft",
+    "description": "非常牛逼的一个行为包",
+    "name": "Pro",
     "uuid": "446e7ce2-9b63-4f07-b3d1-71ad033b16b3",
-    "version": [1, 0, 1],
+    "version": [1, 0, 2],
     "min_engine_version": [1, 16, 0]
     },
     "modules": [
@@ -13,6 +13,12 @@
         "version": [0, 0, 1],
         "uuid": "8f43fa06-db76-3648-a908-17ace5792be4",
         "type": "data"
+      },
+      {
+        "description": "pro",
+        "version": [0, 0, 2],
+        "uuid": "70669386-bcbe-3bd1-c532-54fadc8e5a1e",
+        "type": "resources"
       }
     ]
 }
