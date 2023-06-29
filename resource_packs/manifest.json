@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+      "description": "Pro资源包",
+      "name": "Pro Resource Pack",
+      "uuid":"790c5bb2-eb58-46b3-b137-561db809eaa9",
+      "version": [1, 0, 0],
+      "min_engine_version": [1, 16, 0]
+     },
+    "modules": [
+      {
+        "description": "My First Add-On!",
+        "type": "resources",
+        "uuid": "871eb200-26c5-4d5b-9038-ef2d76b03b08",
+        "version": [1, 0, 0]
+      }
+    ]
+   }
