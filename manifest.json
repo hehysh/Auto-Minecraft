@@ -8,7 +8,11 @@
     "min_engine_version": [1, 16, 0]
     },
     "modules": [
-    {
+      {
+        "description": "very good pack",
+        "version": [0, 0, 1],
+        "uuid": "8f43fa06-db76-3648-a908-17ace5792be4",
+        "type": "data"
       }
     ]
 }
