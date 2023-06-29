@@ -2,7 +2,8 @@
     "format_version": "1.16.0",
     "minecraft:pro": {
       "description": {
-        "identifier": "minecraft:pro",
+        "identifier": "test:pro",
+        "runtime_identifier": "test:pro",
         "is_spawnable": true,
         "is_summonable": true,
         "is_experimental": false
@@ -10,29 +11,32 @@
       "component_groups": {},
       "components": {
         "minecraft:type_family": {
-          "family": "minecraft:player"
+          "family": [ "test", "npc"]
         },
         "minecraft:health": {
           "value": 20,
           "max": 20
         },
-        "minecraft:attack": {
+        "minecraft:behavior.nearest_attackable_target": {
           "priority": 1,
-          "target_filters": {
-            "minecraft:entity_type_filter": {
-              "all_of": [
-                {
-                  "minecraft:is_spawnable_mob": {
-                    "value": true
-                  }
-                },
-                {
-                  "minecraft:type_family": {
-                    "family": "zombie"
-                  }
-                }
-              ]
+          "entity_types": [
+            {
+              "filters": { "other_with_families": "player" },
+              "max_dist": 16
             }
+          ], 
+          "must_see": true
+        },
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 3.0,
+          "outside_range": 7.0,
+          "on_inside_range": {
+            "event": "minecraft:start_exploding",
+            "target": "self"
+          },
+          "on_outside_range": {
+            "event": "minecraft:stop_exploding",
+            "target": "self"
           }
         }
       }

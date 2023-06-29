@@ -1,25 +1,14 @@
 {
     "format_version": 2,
     "header": {
-    "description": "Auto play Minecraft",
+    "description": "🐮🍺",
     "name": "AutoCraft",
     "uuid": "446e7ce2-9b63-4f07-b3d1-71ad033b16b3",
-    "version": [1, 0, 0],
+    "version": [1, 0, 1],
     "min_engine_version": [1, 16, 0]
     },
     "modules": [
     {
-    "description": "My First Behavior Pack",
-    "type": "data",
-    "uuid": "1739949a-4207-42a9-8a60-8b3d5f9a5e1c",
-    "version": [1, 0, 0]
-    },
-    {
-        "type": "data",
-        "uuid": "13f716e3-b5bb-47ff-87d3-790dae2ea939",
-        "version": [0, 0, 1],
-        "description": "Pro Home Biome",
-        "data": "biomes/prohome.json"
       }
     ]
 }
