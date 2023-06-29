@@ -1,10 +1,10 @@
 {
   "format_version": 2,
   "header": {
-    "description": "非常牛逼的一个行为包",
-    "name": "Pro",
+    "description": "非常牛逼的一个行为包-晴雀倾力制作",
+    "name": "噩梦",
     "uuid":"0d35884e-3c26-4635-9ed2-255576d63e9a",
-    "version": [2, 0, 0],
+    "version": [2, 4, 2],
     "min_engine_version": [1, 16, 0]
   },
   "modules":
