@@ -6,45 +6,6 @@
           "is_spawnable": true,
           "is_summonable": true
       },
-      "component_groups": {
-        "minecraft:floating": {
-          "minecraft:buoyant": {
-            "base_buoyancy": 1.0,
-            "apply_gravity": true,
-            "simulate_waves": true,
-            "big_wave_probability": 0.03,
-            "big_wave_speed": 10.0,
-            "liquid_blocks": [
-              "minecraft:water",
-              "minecraft:flowing_water"
-            ]
-          }
-        },
-        "minecraft:behavior.hurt_by_target": {
-          "priority": 2,
-          "entity_types": {
-            "filters": { 
-                "all_of": [
-                ] 
-            }
-          }
-        },
-        "minecraft:behavior.defend_village_target": {
-          "priority": 1,
-          "must_reach": true,
-          "attack_chance": 0.5,
-          "entity_types": {
-            "filters": {
-              "distance": 40,
-              "any_of": [
-                { "test": "is_family", "subject": "other", "value": "mob" },
-                { "test": "is_family", "subject": "other", "value": "player" }
-              ] 
-            }
-          }
-        }
-      },
-
       "components": {
         "minecraft:physics": {},
         "minecraft:nameable": {},
@@ -54,10 +15,12 @@
         "minecraft:movement.basic": {},
         "minecraft:jump.static": {},
         "minecraft:navigation.walk": {
-            "avoid_water": false
-        },
+          "can_path_over_water": true,
+          "avoid_water": true,
+          "avoid_damage_blocks": true
+      },
         "minecraft:behavior.tempt": {
-            "priority": 1,
+            "priority": 2,
             "speed_multiplier": 1.4,
             "items": ["diamond"],
             "within_radius": 7.0
@@ -69,7 +32,18 @@
         },
         "minecraft:experience_reward": {
             "on_death": 114
-        }
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 1,
+          "speed_multiplier": 2.0,
+          "attack_radius": 12.0,
+          "attack_damage": 3.0,
+          "find_target": {
+              "max_dist": 40.0,
+              "must_see": false,
+              "must_reach": true
+          }
+      }      
       }
     }
 }
