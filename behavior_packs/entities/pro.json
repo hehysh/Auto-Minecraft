@@ -33,17 +33,29 @@
         "minecraft:experience_reward": {
             "on_death": 114
         },
-        "minecraft:behavior.melee_attack": {
+        "minecraft:behavior.nearest_attackable_target": {
           "priority": 1,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 50.0,
+          "entity_types": [
+              {
+                  "filters": {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "monster"
+                  },
+                  "max_dist": 40
+              }
+          ]
+      },
+        "minecraft:behavior.melee_attack": {
+          "priority": 2,
           "speed_multiplier": 2.0,
           "attack_radius": 12.0,
-          "attack_damage": 3.0,
-          "find_target": {
-              "max_dist": 40.0,
-              "must_see": false,
-              "must_reach": true
-          }
-      }      
+          "attack_damage": 3.0
+        }
+        
       }
     }
 }
