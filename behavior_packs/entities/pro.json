@@ -10,7 +10,7 @@
         "minecraft:physics": {},
         "minecraft:nameable": {},
         "minecraft:movement": {
-            "value": 0.4
+            "value": 0.35
         },
         "minecraft:movement.basic": {},
         "minecraft:jump.static": {},
@@ -20,7 +20,7 @@
         "minecraft:behavior.tempt": {
             "priority": 1,
             "speed_multiplier": 1.4,
-            "items": ["diamond"],
+            "items": ["diamond","iron","gold"],
             "within_radius": 7.0
         },
         "minecraft:behavior.random_stroll":
@@ -29,7 +29,7 @@
             "speed_multiplier": 0.8
         },
         "minecraft:experience_reward": {
-            "on_death": 8
+            "on_death": 114
         },
         "component_groups": {
             "minecraft:floating": {
@@ -45,7 +45,55 @@
                 ]
               }
             }
-        }
+        },
+        "minecraft:navigation": {
+          "can_path_over_water": true
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 1,
+          "speed_multiplier": 1.0,
+          "pause_chance": 0.0,
+          "wants_to_stop": true
+        },
+        "minecraft:behavior.attack": {
+          "priority": 2,
+          "target_filters": {
+            "all_of": [
+              {
+                "test": "is_family",
+                "value": "cow"
+              },
+              {
+                "test": "is_family",
+                "value": "zombie"
+              },
+              {
+                "test": "is_family",
+                "value": "skeleton"
+              },
+              {
+                "test": "is_family",
+                "value": "creeper"
+              }
+            ]
+          }
+        },
+        "minecraft:behavior.circle_around": {
+          "priority": 3,
+          "target_filters": {
+            "all_of": [
+              {
+                "test": "is_family",
+                "value": "pro"
+              }
+            ]
+          },
+          "radius": 10,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 1
+      }
     }
   }
 }
