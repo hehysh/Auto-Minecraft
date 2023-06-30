@@ -26,9 +26,6 @@
         "speed_multiplier": 0.5,
         "can_pickup_to_hand_or_equipment": false
       },
-      "minecraft:behavior.fly": {
-        "priority": 1
-      },      
       "minecraft:behavior.share_items": {
         "priority": 5,
         "max_dist": 3,
@@ -120,22 +117,6 @@
         "is_pushable_by_piston": true
       },
       "minecraft:conditional_bandwidth_optimization": {},
-      "minecraft:behavior.nearest_attackable_target": {
-        "priority": 1,
-        "must_see": true,
-        "reselect_targets": true,
-        "within_radius": 200.0,
-        "entity_types": [
-          {
-            "filters": {
-              "test": "is_family",
-              "subject": "other",
-              "value": ["monster","animal","player"]
-            },
-            "max_dist": 200
-          }
-        ]
-      },
       "minecraft:behavior.melee_attack": {
         "priority": 2
       },
