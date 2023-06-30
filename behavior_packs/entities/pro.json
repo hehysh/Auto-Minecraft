@@ -10,7 +10,7 @@
       "minecraft:physics": {},
       "minecraft:nameable": {},
       "minecraft:movement": {
-        "value": 0.7
+        "value": 0.6
       },
       "minecraft:collision_box": {
         "width": 0.6,
@@ -41,7 +41,7 @@
         ]
       },
       "minecraft:behavior.hurt_by_target": {
-        "priority": 1
+        "priority": 2
       },
       "minecraft:behavior.move_towards_dwelling_restriction": {
         "priority": 11,
@@ -71,9 +71,9 @@
       },
       "minecraft:behavior.tempt": {
         "priority": 2,
-        "speed_multiplier": 1.4,
+        "speed_multiplier": 0.8,
         "items": ["diamond"],
-        "within_radius": 7.0
+        "within_radius": 100.0
       },
       "minecraft:behavior.random_stroll": {
         "priority": 3,
@@ -84,24 +84,24 @@
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 1,
-        "must_see": false,
+        "must_see": true,
         "reselect_targets": true,
-        "within_radius": 50.0,
+        "within_radius": 200.0,
         "entity_types": [
           {
             "filters": {
               "test": "is_family",
               "subject": "other",
-              "value": "monster"
+              "value": ["monster","animal","player"]
             },
-            "max_dist": 40
+            "max_dist": 200
           }
         ]
       },
       "minecraft:behavior.melee_attack": {
         "priority": 2,
-        "speed_multiplier": 2.0,
-        "attack_radius": 12.0,
+        "speed_multiplier": 3.0,
+        "attack_radius": 20.0,
         "attack_damage": 3.0
       },
       "minecraft:health": {
