@@ -10,14 +10,58 @@
       "minecraft:physics": {},
       "minecraft:nameable": {},
       "minecraft:movement": {
-        "value": 0.35
+        "value": 0.5
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 4,
+        "max_dist": 3,
+        "goal_radius": 10,
+        "speed_multiplier": 0.5,
+        "can_pickup_to_hand_or_equipment": false
+      },
+      "minecraft:behavior.share_items": {
+        "priority": 5,
+        "max_dist": 3,
+        "goal_radius":  10.0,
+        "speed_multiplier": 0.5,
+        "entity_types": [
+          {
+            "filters": { "test" :  "is_family", "subject" : "other", "value" :  "pro"}
+          }
+        ]
+      },
+      "minecraft:behavior.move_towards_dwelling_restriction": {
+        "priority": 11,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 11,
+        "speed_multiplier": 0.6
+      },
+        "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
       "minecraft:navigation.walk": {
         "can_path_over_water": true,
-        "avoid_water": true,
-        "avoid_damage_blocks": true
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:annotation.open_door": {
+      },
+      "minecraft:persistent": {
       },
       "minecraft:behavior.tempt": {
         "priority": 2,
@@ -55,14 +99,15 @@
         "attack_damage": 3.0
       },
       "minecraft:health": {
-        "value": 40,
-        "max": 40
+        "value": 50,
+        "max": 50
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
         "look_distance": 6.0,
         "probability": 0.02
       },
+      "minecraft:can_climb": {},
       "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": true,
@@ -89,7 +134,7 @@
         "priority": 2
       },
       "minecraft:attack": {
-        "damage": 3
+        "damage": 5
       }
     }
   }
